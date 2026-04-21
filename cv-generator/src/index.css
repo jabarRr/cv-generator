@@ -1,0 +1,49 @@
+*{
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+.pageContent{
+  gap: 50px;
+  background-color:bisque;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+.sideBarSection,
+.cvSection{
+  border-radius: 1.5%;
+  padding: 5px;
+  text-align: center;
+  border: 2px solid black;
+}
+.sideBarSection{
+  width: 500px;
+}
+.cvSection{
+  width: 700px;
+}
+.detailsBtnSection{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.clearCvBtn,
+.populateCv{
+  font-size: 28px;
+
+}
+
+.detailsForm{
+  border-radius: 2px;
+  padding: 2px;
+  
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black; 
+}
