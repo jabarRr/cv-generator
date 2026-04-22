@@ -11,7 +11,7 @@ function CvCanvas({fullName, email, phoneNumber, address, educationInfo, jobInfo
 
     function renderEducationList (){
         
-        if (jobInfo.length > 0){
+        if (educationInfo.length > 0){
             return (
             
             
@@ -123,7 +123,7 @@ function CvCanvas({fullName, email, phoneNumber, address, educationInfo, jobInfo
 
                 <div className="jobSection">
                     <div className="jobHeader">
-                        <h2>Work Experience</h2>
+                        {jobInfo.length > 0 && <h2>Work Experience</h2>}
                     </div>
                     <div className="jobList">
                         {renderJobList ()}

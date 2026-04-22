@@ -13,25 +13,79 @@ export default function PageLayout () {
     const [jobToggle, setJobToggle] = useState(false);
     const [eduToggle, setEduToggle] = useState(false);
     // Job / Education Use States
-    const [educationInfo, setEducationInfo] = useState([{
-        id: 0,
-        name: "University Of West London",
-        startDate: "01/2021",
-        endDate: "01/2024",
-        degree: "Comp Scie",
-        location: "London",
-        description: "Completed A Three year degree that greatly helped increase my skillset"
-    }]);
+    const [educationInfo, setEducationInfo] = useState([]);
     const [jobInfo, setJobInfo] = useState([]);
+
+   function renderExampleCv(){
+    fullNameSet("John Doe");
+    emailSet("johndoe@hotmail.com");
+    phoneNumberSet("123456789");
+    addressSet("64 Zoo Lane");
+
+    setEducationInfo([ 
+        {
+            name : "University of West London",
+            startDate : "01/2022",
+            endDate : "01/2025",
+            degree : "Computer Science",
+            location : "London",
+            description : "Completed a three year long cs degree in which learned a lot of valuable skills"
+        },
+        {
+            name : "Queen Mary university",
+            startDate : "01/2026",
+            endDate : "01/2027",
+            degree : "Advance Computer Science",
+            location : "London",
+            description : "Completed a one year long cs degree in which learned a lot of valuable skills"
+
+        }]
+    )
+    setJobInfo([
+        {
+            name : "Amazon",
+            startDate : "01/2030",
+            endDate : "01/2032",
+            role : "Software Enginner",
+            location : "London",
+            description : "Made it to Faaaaaaaaaaaaaaaaaang"
+        },
+        {
+            name : "Google",
+            startDate : "01/2032",
+            endDate : "01/2034",
+            role : "Software Enginner",
+            location : "London",
+            description : "A hardworking Google Employee"
+        }
+    ]
+    )
+
+   }
+
+   function clearCv () {
+    fullNameSet("");
+    emailSet("");
+    phoneNumberSet("");
+    addressSet("");
+    setJobInfo([]);
+    setEducationInfo([]);
+   }
+
+
 
 
     return (
         <div className="pageContent">
             <div className="sideBarSection">
-                <h1>Details</h1>
+                
                 <div className="detailsBtnSection">
-                    <button className="clearCvBtn">Clear Cv</button>
-                    <button className="populateCv">Load Example</button>
+                    <button 
+                    className="clearCvBtn"
+                    onClick={clearCv}>Clear Cv</button>
+                    <button 
+                    className="populateCv"
+                    onClick={renderExampleCv}>Load Example</button>
                 </div>
                 <DetailsLayout 
                 fullNameSet={fullNameSet} emailSet={emailSet} 
@@ -39,11 +93,12 @@ export default function PageLayout () {
                 setEduToggle={setEduToggle} eduToggle={eduToggle}
                 setEducationInfo={setEducationInfo} educationInfo={educationInfo}
                 jobInfo={jobInfo} setJobInfo={setJobInfo}
-                jobToggle={jobToggle} setJobToggle={setJobToggle} />
+                jobToggle={jobToggle} setJobToggle={setJobToggle}
+                 />
             </div>
             <div className="cvSection">
                 
-                <CvLayout fullName={fullName} email={email} phoneNumber={phoneNumber} address={address} educationInfo={educationInfo} jobInfo={jobInfo}/>
+                <CvLayout fullName={fullName} email={email} phoneNumber={phoneNumber} address={address} educationInfo={educationInfo} jobInfo={jobInfo} />
             </div>
         </div>
     )

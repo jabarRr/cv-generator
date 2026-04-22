@@ -122,6 +122,8 @@ function EducationExperienceCard ({setEduToggle, eduToggle, setEducationInfo, ed
             }])
     }
 
+   
+
 
 
 
@@ -140,7 +142,7 @@ function EducationExperienceCard ({setEduToggle, eduToggle, setEducationInfo, ed
     
     <div className="mainEduSection"
     style={{
-        height : eduToggle && !newEduToggle ? "250px" : "0px",
+        height : eduToggle && !newEduToggle ? "auto" : "0px",
        
     }}
     >
@@ -151,12 +153,7 @@ function EducationExperienceCard ({setEduToggle, eduToggle, setEducationInfo, ed
         key={education.id}
         >
             <h2>{education.name} {education.id}</h2>
-            <button 
-            className='editEduBtn'
-            onClick = {() => {
             
-        }}
-            >Edit</button>
         </div>
     )}
     <button 
@@ -171,7 +168,7 @@ function EducationExperienceCard ({setEduToggle, eduToggle, setEducationInfo, ed
     <div 
     className="createEduDiv"
     style={{
-        height : newEduToggle ? "250px" : "0px",
+        height : newEduToggle ? "auto" : "0px",
        
     }}>
         <form action="" className='createNewEduForm' name='createNewEduForm'>
@@ -179,16 +176,16 @@ function EducationExperienceCard ({setEduToggle, eduToggle, setEducationInfo, ed
         <input type="text" id='eduName' className='eduName' placeholder='Enter School or University'/>
         
         <label htmlFor="eduStartDate">Start Date</label>
-        <input type="text" id='eduStartDate' className='eduStartDate'/>
+        <input type="text" id='eduStartDate' className='eduStartDate' placeholder='MM/YYYY'/>
         
         <label htmlFor="eduEndDate">End Date</label>
-        <input type="text" id='eduEndDate' className='eduEndDate'/>
+        <input type="text" id='eduEndDate' className='eduEndDate' placeholder='MM/YYYY'/>
         
         <label htmlFor="eduDegree">Degree</label>
         <input type="text" className='eduDegree' id='eduDegree' placeholder='Enter Field of Study or Degree'/>
 
         <label htmlFor="eduLocation">Location</label>
-        <input type="text" id='eduLocation' className='eduLocation'/>
+        <input type="text" id='eduLocation' className='eduLocation' placeholder='city, country'/>
 
         <label htmlFor="eduDescription">Description</label>
         <input type="text" id='eduDescription' className='eduDescription' placeholder='Enter brief description (optional)'/>
@@ -255,7 +252,7 @@ function JobExperienceCard ({setJobToggle, jobToggle, jobInfo, setJobInfo}){
     
     <div className="mainJobSection"
     style={{
-        height : jobToggle && !newJobToggle ? "250px" : "0px",
+        height : jobToggle && !newJobToggle ? "auto" : "0px",
        
     }}
     >
@@ -267,12 +264,7 @@ function JobExperienceCard ({setJobToggle, jobToggle, jobInfo, setJobInfo}){
         
         >
             <h2>{job.name} {job.id}</h2>
-            <button 
-            className='editJobBtn'
-            onClick = {() => {
             
-        }}
-            >Edit</button>
         </div>
     )}
     <button 
@@ -287,24 +279,24 @@ function JobExperienceCard ({setJobToggle, jobToggle, jobInfo, setJobInfo}){
     <div 
     className="createJobDiv"
     style={{
-        height : newJobToggle ? "250px" : "0px",
+        height : newJobToggle ? "auto" : "0px",
        
     }}>
         <form action="" className='createNewJobForm' name='createNewJobForm'>
-        <label htmlFor="jobName">School</label>
-        <input type="text" id='jobName' className='jobName' placeholder='Enter School or University'/>
+        <label htmlFor="jobName">Company</label>
+        <input type="text" id='jobName' className='jobName' placeholder='Enter Company'/>
         
         <label htmlFor="jobStartDate">Start Date</label>
-        <input type="text" id='jobStartDate' className='jobStartDate'/>
+        <input type="text" id='jobStartDate' className='jobStartDate' placeholder='MM/YYYY'/>
         
         <label htmlFor="jobEndDate">End Date</label>
-        <input type="text" id='jobEndDate' className='jobEndDate'/>
+        <input type="text" id='jobEndDate' className='jobEndDate' placeholder='MM/YYYY'/>
         
         <label htmlFor="jobRole">Role</label>
-        <input type="text" className='jobRole' id='jobRole' placeholder='Enter Field of Study or Degree'/>
+        <input type="text" className='jobRole' id='jobRole' placeholder='Enter Role'/>
 
         <label htmlFor="jobLocation">Location</label>
-        <input type="text" id='jobLocation' className='jobLocation'/>
+        <input type="text" id='jobLocation' className='jobLocation' placeholder='city, country'/>
 
         <label htmlFor="jobDescription">Description</label>
         <input type="text" id='jobDescription' className='jobDescription' placeholder='Enter brief description (optional)'/>
