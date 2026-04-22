@@ -1,0 +1,69 @@
+.educationHeader,
+.jobHeader{
+    background-color: #EEF1F3;
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.educationSectionLs,
+.jobSectionLs{
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+    display: flex;
+    gap: 18px;
+}
+.eduMainSecDiv,
+.jobMainSecDiv{
+    text-align: left;
+}
+.previewEduSection,
+.previewJobSection{
+  font-size: 24px;
+  margin-left: 10%;
+  margin-right: 5%;
+  justify-content: space-between;
+  display: flex;
+}
+
+.educationCardDiv,
+.jobCardDiv{
+  margin-top: 10px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  border: 2px solid black;
+  overflow: hidden;
+  
+}
+.mainEduSection,
+.mainJobSection{
+  transition: height 0.4s ease;
+  overflow: hidden;
+}
+.customEduCard,
+.customJobCard{
+  font-size: 18px;
+  margin-top: 10px;
+  padding-left: 10%;
+  padding-right: 5%;
+  justify-content: space-between;
+  border: 1px solid black;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+}
+.addNewEduBtn,
+.addNewJobBtn{
+  font-size: 18px;
+}
+.createEduDiv,
+.createJobDiv{
+  overflow: hidden;
+  
+}
+.createNewEduForm,
+.createNewJobForm{
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+}
